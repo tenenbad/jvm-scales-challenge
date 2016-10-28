@@ -24,11 +24,12 @@ class ScalesChallenge {
         outputScale.add(RelativeNote(note))
 
         val chosenScale : List<Int>
-        when(scale){
+        var scaleTypeUpper = scale.toUpperCase()
+        when(scaleTypeUpper){
             null -> chosenScale = majorScaleSteps
-            "major" -> chosenScale = majorScaleSteps
-            "minor" -> chosenScale = minorScaleSteps
-            "twinkle" -> chosenScale = twinkleSteps
+            "MAJOR" -> chosenScale = majorScaleSteps
+            "MINOR" -> chosenScale = minorScaleSteps
+            "TWINKLE" -> chosenScale = twinkleSteps
             else -> {
                 chosenScale = majorScaleSteps
             }
